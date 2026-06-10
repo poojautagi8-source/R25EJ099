@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pooja | Systems Software Engineer & Creative Developer Portfolio. Exploring graphics, algorithms, and interactive applications.">
+    <title>Pooja | Creative Systems Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link to custom stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background glow elements for aesthetics -->
+    <div class="blob-glow blob-1" id="glow1"></div>
+    <div class="blob-glow blob-2" id="glow2"></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-accent">&lt;</span>Pooja<span class="logo-accent">/&gt;</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#sandbox">Sandbox</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="tagline">SYSTEMS & ALGORITHMS ENGINEER</div>
+                <h1 class="hero-title">Designing the Architecture of <span class="gradient-text">Interactive Systems</span></h1>
+                <p class="hero-desc">
+                    I build high-performance terminal applications, mathematical vector renderers, and elegant interactive TUIs. Focused on clean code, algorithmic efficiency, and visual excellence.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#sandbox" class="btn btn-secondary">Try Drawing Sandbox</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Avatar image/visual representation -->
+                <div class="avatar-frame">
+                    <div class="avatar-glow"></div>
+                    <img id="avatar-img" src="assets/developer_avatar.png" alt="Developer Avatar" class="avatar-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+            <div class="about-grid">
+                <div class="about-card intro-card">
+                    <h3>My Philosophy</h3>
+                    <p>
+                        I love solving complex graphical and system problems. I specialize in building light-weight, dependency-free codebases that deliver smooth, premium terminal interfaces and interactive structures.
+                    </p>
+                </div>
+                <div class="about-card skills-card">
+                    <h3>Technical Arsenal</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <div class="badges">
+                                <span class="badge">C</span>
+                                <span class="badge">C++</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">JavaScript (ES6+)</span>
+                                <span class="badge">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Core Strengths</h4>
+                            <div class="badges">
+                                <span class="badge">Rasterization Algorithms</span>
+                                <span class="badge">TUI/CLI Menus</span>
+                                <span class="badge">Data Structures</span>
+                                <span class="badge">Object Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title"><span class="gradient-text">Featured Work</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1: 2D Graphics Editor -->
+                <div class="project-card">
+                    <div class="project-visual code-preview">
+                        <pre><code>// Bresenham's Algorithm
+void draw_line(...) {
+  int err = dx - dy;
+  while (1) {
+    plot(canvas, x1, y1);
+    ...
+  }
+}</code></pre>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">C Language</span>
+                        <h3>2D ASCII Graphics Editor</h3>
+                        <p>A portable systems program executing raster drawings onto character matrices. Supports vector shape storage (lines, triangles, circles, rectangles) with interactive ANSI and TUI terminal key-polling options.</p>
+                        <div class="project-links">
+                            <a href="../graphics_editor/gdb_online_single.c" class="project-link" target="_blank">View Standalone Code</a>
+                            <a href="#sandbox" class="project-link demo-scroll">Web Simulation &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Terminal TUI Engine -->
+                <div class="project-card">
+                    <div class="project-visual illustration-visual">
+                        <div class="tui-mock">
+                            <div class="tui-header">─ ACTIVE SHAPES ──────────</div>
+                            <div class="tui-body">
+                                <span>[1] Circle: center(30,10), r=5</span>
+                                <span>[2] Rectangle: (10,5) to (20,12)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Systems & Visuals</span>
+                        <h3>Keyboard-Driven TUI Engine</h3>
+                        <p>A wrapper using native console handles to poll key events, capture screen boundaries, and render double-buffered console visuals without third-party dependencies.</p>
+                        <div class="project-links">
+                            <a href="../graphics_editor/editor_interactive.c" class="project-link" target="_blank">View Implementation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Sandbox Drawing Section (Unique WOW Feature) -->
+        <section id="sandbox" class="sandbox-section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">2D ASCII Canvas Sandbox</span></h2>
+                <p class="section-subtitle">Experience the drawing algorithms in real-time. Choose a tool, click coordinates on the grid, and build ASCII art!</p>
+            </div>
+            
+            <div class="sandbox-container">
+                <!-- Sidebar Controls -->
+                <div class="sandbox-controls">
+                    <div class="control-group">
+                        <label>Drawing Tool</label>
+                        <div class="tool-buttons">
+                            <button class="tool-btn active" id="tool-line" data-tool="line">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"></line></svg>
+                                Line
+                            </button>
+                            <button class="tool-btn" id="tool-rect" data-tool="rect">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+                                Rectangle
+                            </button>
+                            <button class="tool-btn" id="tool-circle" data-tool="circle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                                Circle
+                            </button>
+                            <button class="tool-btn" id="tool-triangle" data-tool="triangle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 22 2 22"></polygon></svg>
+                                Triangle
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Active Shapes</label>
+                        <div class="shape-list-container" id="sandbox-shape-list">
+                            <div class="empty-list-text">No shapes drawn yet. Click on the canvas grid to start!</div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="btn-clear">Clear Grid</button>
+                        <button class="btn btn-primary" id="btn-export">Export ASCII (.txt)</button>
+                    </div>
+                </div>
+
+                <!-- Live Canvas Display -->
+                <div class="sandbox-workspace">
+                    <div class="sandbox-status" id="sandbox-status-text">Click anywhere on the grid to place the first point.</div>
+                    <div class="canvas-wrapper">
+                        <!-- Numeric row and col headers -->
+                        <div class="canvas-container">
+                            <div class="grid-col-header" id="col-header"></div>
+                            <div class="grid-row-header" id="row-header"></div>
+                            <div class="canvas-grid" id="grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title"><span class="gradient-text">Get In Touch</span></h2>
+            <div class="contact-card">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required rows="5" placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                        <span>Send Message</span>
+                    </button>
+                </form>
+                <div id="form-success" class="form-success-msg">Message sent successfully! Thank you for reaching out.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Pooja. Made with Passion, standard HTML/CSS, and ASCII art.</p>
+    </footer>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
