@@ -1,0 +1,86 @@
+================================================================================
+USER PROMPTS & ANSWERS LOG: 2D GRAPHICS EDITOR
+================================================================================
+
+--------------------------------------------------------------------------------
+PROMPT 1:
+--------------------------------------------------------------------------------
+Problem Statement: Write a 2d graphics editor in C using * and _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+      modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+
+--------------------------------------------------------------------------------
+ANSWER 1:
+--------------------------------------------------------------------------------
+Proposed a C-based architectural implementation plan using standard structures 
+and modular design:
+- File `editor.h`: Declares coordinates, shapes, structures, and function interfaces.
+- File `drawing.c`: Rasterization algorithms (Bresenham line algorithm, Midpoint circle algorithm, rectangle/triangle drawing).
+- File `editor.c`: Handles dynamic shape registry, lists, and input/output CLI commands.
+
+* Implementation Plan Artifact: implementation_plan.md
+
+
+--------------------------------------------------------------------------------
+PROMPT 2:
+--------------------------------------------------------------------------------
+"give the code"
+
+--------------------------------------------------------------------------------
+ANSWER 2:
+--------------------------------------------------------------------------------
+Wrote the complete standard modular C code for the 2D graphics editor.
+Created the following three files in the workspace:
+1. editor.h (structures and signatures)
+2. drawing.c (line, rectangle, circle, triangle drawing algorithms)
+3. editor.c (canvas rendering, menu choices, coordinate scanners)
+
+* Task Checklist Artifact: task.md
+* Final walkthrough details: walkthrough.md
+
+
+--------------------------------------------------------------------------------
+PROMPT 3:
+--------------------------------------------------------------------------------
+"give the code" (Subsequent request after proposing interactive GUI features)
+
+--------------------------------------------------------------------------------
+ANSWER 3:
+--------------------------------------------------------------------------------
+Implemented a fully interactive Terminal User Interface (TUI) version:
+- File `editor_interactive.c`: Integrates keyboard events (_getch, _kbhit) and console cursors to allow real-time shape previews, visual coordinate picking via arrow keys, and dynamically adjusting circle radii.
+
+* Added compilation and run guidelines to walkthrough.md
+
+
+--------------------------------------------------------------------------------
+PROMPT 4:
+--------------------------------------------------------------------------------
+"give the code that run in gdb online platform without any error after runing"
+
+--------------------------------------------------------------------------------
+ANSWER 4:
+--------------------------------------------------------------------------------
+Consolidated the headers, drawing functions, input controllers, state variables, and menus into a single C file (`gdb_online_single.c`). This single-file code is 100% standard C, does not rely on Windows-specific headers (like conio.h or windows.h), and uses cross-platform ANSI colors, making it fully ready to be copied, pasted, and run directly inside the GDB Online compiler platform.
+
+* Generated Standalone File: gdb_online_single.c
+
+
+--------------------------------------------------------------------------------
+PROMPT 5:
+--------------------------------------------------------------------------------
+"give a file named as 'prompt.txt' with all the above prompts and their corresponding answers"
+
+--------------------------------------------------------------------------------
+ANSWER 5:
+--------------------------------------------------------------------------------
+Created the log file `prompt.txt` inside the graphics_editor workspace directory, documenting each prompt sequence and the associated C coding response.
+================================================================================
